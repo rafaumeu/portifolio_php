@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="UTF-8">
@@ -100,19 +100,12 @@
             </span>';
         }
     }
-    function filter($items, $function)
-    {
 
-        $filteredProjects = [];
-        foreach ($items as $item) {
-            if ($function($item)) {
-                $filteredProjects[] = $item;
-            }
-        }
-        return $filteredProjects;
-    }
-    $projects = filter($projects, function ($projects) {
-        return $projects["year"] === 2024 || $projects["year"] === 2023;
+    $projects = array_filter($projects, function ($projects) {
+        return $projects["year"] >= 2024 || $projects["year"] === 2023;
+    });
+    $books = array_filter($books, function ($books) {
+        return $books["read"] === true;
     });
     ?>
     <h1><?= $title; ?></h1>
@@ -142,7 +135,7 @@
     <hr />
     <h2>Livros</h2>
     <ul>
-        <?php foreach (filter($books, "read", true) as $book): ?>
+        <?php foreach ($books as $book): ?>
             <li><?= $book["title"]; ?> - <?= $book["author"]; ?> - <?= $book["year"]; ?></li>
         <?php endforeach; ?>
     </ul>
