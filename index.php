@@ -38,6 +38,18 @@
             "descricao" => "Este é o meu portfólio, onde você pode ver todos os meus projetos e minhas habilidades.",
         ]
     ];
+    function verifyIfProjectIsFinalized($projeto)
+    {
+        if ($projeto["finalizado"]) {
+            echo '<span style="color: green;">
+                ✅ finalizado
+            </span>';
+        } else {
+            echo '<span style="color: red;">
+                ⛔ em andamento
+            </span>';
+        }
+    }
     ?>
     <h1><?= $titulo; ?></h1>
     <p><?= $subtitulo; ?></p>
@@ -56,16 +68,7 @@
                     <p><?= $projeto["finalizado"]; ?></p>
                     <div>Projeto:
 
-                        <?php if ($projeto["finalizado"]): ?>
-                            <span style="color: green;">
-                                ✅ finalizado
-                            </span>
-
-                        <?php else: ?>
-                            <span style="color: red;">
-                                ⛔ em andamento
-                            </span>
-                        <?php endif; ?>
+                        <?php verifyIfProjectIsFinalized($projeto); ?>
 
                     </div>
                 </div>
