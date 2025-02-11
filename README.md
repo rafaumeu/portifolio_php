@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🚀 PHP Dynamic Portfolio
@@ -33,15 +32,32 @@ A dynamic portfolio built with PHP, showcasing projects and skills with real-tim
 ## 🚀 Features
 
 Reference to the main project code:
-```php:index.php
+```php
+// Project Structure
 $projects = [
     [
         "title" => "My Portfolio",
         "finished" => false,
-        "date" => "2025-11-02",
-        "description" => "This is my portfolio where you can see all my projects and skills.",
+        "year" => 2024,
+        "description" => "Personal portfolio developed with PHP."
     ]
 ];
+
+// Generic Filter Function
+function filter($items, $function) {
+    $filteredItems = [];
+    foreach ($items as $item) {
+        if ($function($item)) {
+            $filteredItems[] = $item;
+        }
+    }
+    return $filteredItems;
+}
+
+// Example Usage
+$projects = filter($projects, function ($project) {
+    return $project["year"] === 2024;
+});
 ```
 
 - **Dynamic Project Management**:
@@ -49,6 +65,17 @@ $projects = [
   - Completion indicators
   - Project descriptions
   - Timeline management
+
+- **Data Filtering**:
+  - Generic filter function for arrays
+  - Year-based project filtering
+  - Read status book filtering
+  - Dynamic data manipulation
+
+- **Books Management**:
+  - Book listing feature
+  - Reading status tracking
+  - Author and publication year display
 
 - **Modern Architecture**:
   - Clean code principles
