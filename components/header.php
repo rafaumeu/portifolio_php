@@ -6,7 +6,7 @@ $items = [
   ['href' => '', 'texto' => 'Twitter'],
 ];
 ?>
-<header class="mx-auto max-w-screen-lg px-3 py-6 flex items-center justify-between">
+<header class="mx-auto max-w-screen-lg px-3 py-6 flex items-center justify-between gap-y-4 sm:gap-y-0">
   <div class="font-bold font-mono text-cyan-600">
     🐧Meu Portfólio
   </div>

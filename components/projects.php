@@ -36,12 +36,12 @@ $projetos = [
 ];
 ?>
 <?php foreach ($projetos as $projeto) : ?>
-  <div class="flex bg-slate-800 rounded-lg p-3 items-center space-x-3">
-    <div class="w-1/5 flex items-center justify-middle">
+  <div class="flex flex-col md:flex-row bg-slate-800 rounded-lg p-3 items-center space-y-3 md:space-x-3 md:space-y-0">
+    <div class="w-full md:w-1/5 flex items-center justify-center">
       <img class="h-42 rounded-md shadow-md bg-slate-900" src="<?= $projeto['img'] ?>">
     </div>
-    <div class="w-4/5 space-y-3">
-      <div class="flex gap-3 justify-between">
+    <div class="w-full md:w-4/5 space-y-3">
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between">
         <h3 class="text-lg font-semibold">
           <?php if ($projeto['finalizado']): ?> ✅<?php endif; ?> <?= $projeto['titulo'] ?>
             <?php if ($projeto['finalizado']): ?>
