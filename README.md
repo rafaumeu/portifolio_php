@@ -1,156 +1,97 @@
 <div align="center">
 
-# 🚀 PHP Dynamic Portfolio
+# 🚀 Portfolio with PHP and TailwindCSS
 
-A dynamic portfolio built with PHP, showcasing projects and skills with real-time status tracking.
+A modern, responsive, and dynamic portfolio built with pure PHP and styled with TailwindCSS.
 
-[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4.svg)](https://php.net/)
-[![Composer](https://img.shields.io/badge/Composer-Latest-885630.svg)](https://getcomposer.org/)
-[![Valet](https://img.shields.io/badge/Valet-Latest-18B69B.svg)](https://laravel.com/docs/valet)
-[![VSCode](https://img.shields.io/badge/VSCode-Latest-007ACC.svg)](https://code.visualstudio.com/)
+[![PHP](https://img.shields.io/badge/PHP-8.3-777BB4.svg)](https://php.net/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC.svg)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
----
-
-## 📖 Table of Contents
-
-| [Tech Stack](#-tech-stack) | [Features](#-features) | [Setup](#️-setup) |
-|---------------------------|------------------------|------------------|
-| [Project Structure](#️-project-structure) | [Development](#-development) | [Contact](#-contact) |
-
----
-
-### ⚡ Tech Stack
-
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
----
 </div>
 
-## 🚀 Features
+---
 
-Reference to the main project code:
-```php
-// Project Structure
-$projects = [
-    [
-        "title" => "My Portfolio",
-        "finished" => false,
-        "year" => 2024,
-        "description" => "Personal portfolio developed with PHP."
-    ]
-];
+## 📖 Overview
 
-// Generic Filter Function
-function filter($items, $function) {
-    $filteredItems = [];
-    foreach ($items as $item) {
-        if ($function($item)) {
-            $filteredItems[] = $item;
-        }
-    }
-    return $filteredItems;
-}
+This project is a complete refactoring of a legacy portfolio. The goal was to modernize the tech stack, moving from old procedural PHP to a component-based structure, maintaining the simplicity of **Vanilla PHP** but with the visual power of **TailwindCSS**.
 
-// Example Usage
-$projects = filter($projects, function ($project) {
-    return $project["year"] === 2024;
-});
-```
+### ✨ What Changed?
 
-- **Dynamic Project Management**:
-  - Project status tracking
-  - Completion indicators
-  - Project descriptions
-  - Timeline management
-
-- **Data Filtering**:
-  - Generic filter function for arrays
-  - Year-based project filtering
-  - Read status book filtering
-  - Dynamic data manipulation
-
-- **Books Management**:
-  - Book listing feature
-  - Reading status tracking
-  - Author and publication year display
-
-- **Modern Architecture**:
-  - Clean code principles
-  - Function modularity
-  - Array-based data structure
-  - Dynamic rendering
-
-## 📦 Prerequisites
-
-- PHP 8.2+
-- Composer
-- Valet (for local development)
-- VS Code with PHP extensions
-
-## 🛠️ Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/rafaumeu/portifolio_php.git
-cd portifolio_php
-```
-
-2. Install dependencies:
-```bash
-composer install
-```
-
-3. Configure local environment:
-```bash
-valet link
-```
-
-4. Open in browser:
-```bash
-valet open
-```
-
-## 🏗️ Project Structure
-
-```
-├── public/              # Public files
-│   └── index.php       # Main entry point
-├── src/                # Source files
-│   ├── functions/      # PHP functions
-│   └── data/          # Data arrays
-├── assets/            # Static assets
-│   ├── css/          # Stylesheets
-│   └── js/           # JavaScript files
-└── composer.json     # Composer configuration
-```
-
-## 📝 Commit Convention
-
-We follow the conventional commits specification:
-
-```
-<type>(<scope>): <description>
-
-[optional body]
-
-[optional footer(s)]
-```
-
-### Types
-- feat: New feature
-- fix: Bug fix
-- docs: Documentation changes
-- style: Code formatting
-- refactor: Code refactoring
-- test: Adding/modifying tests
+- **Frontend**: Full migration to **TailwindCSS** (via CDN for rapid development).
+- **Backend**: Modern PHP serving as a template engine.
+- **Structure**: Separation of concerns in `components/` (Header, Hero, Projects).
+- **Assets**: Organized management of images and dynamic SVG icons.
+- **Workflow**: Automated scripts for semantic commits in WSL.
 
 ---
 
+## 🛠️ Technologies
+
+- **PHP 8.2+**: Rendering logic and data.
+- **TailwindCSS 3.4**: Utility-first styling.
+- **Semantic HTML5**: Accessible and SEO-friendly structure.
+- **Git Flow & Conventional Commits**: Versioning standard.
+
+---
+
+## 🚀 Project Structure
+
+```bash
+├── 📁 .agent/          # Automation workflows (AI)
+├── 📁 components/      # Reusable UI components
+│   ├── header.php
+│   ├── hero.php
+│   └── projects.php
+├── 📁 img/             # Assets (Images, Icons, SVG)
+├── index.php           # Entry Point (Main Layout)
+└── README.md           # Documentation
+```
+
+---
+
+## ⚡ How to Run
+
+### Prerequisites
+- PHP 8.0 or higher installed.
+
+### Step-by-Step
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rafaumeu/portifolio_php.git
+   cd portifolio_php
+   ```
+
+2. **Start the Built-in Server:**
+   ```bash
+   php -S localhost:8000
+   ```
+
+3. **Access:**
+   Open `http://localhost:8000` in your browser.
+
+---
+
+## 🎨 Customization
+
+### Adding New Projects
+Go to `components/projects.php` and add to the `$projects` array:
+
+```php
+[
+    "titulo" => "New Project",
+    "finalizado" => true,
+    "ano" => 2025,
+    "descricao" => "Amazing description...",
+    "stack" => ["PHP", "Laravel"],
+    "img" => "img/new-project.png"
+]
+```
+
+---
 <div align="center">
-Developed with ❤️ during Rocketseat's course
+Developed with 🐧 during Rocketseat's course
 </div>
 <div align="center">
 <img src="https://github.com/rafaumeu.png" width="100" height="100" style="border-radius: 50%;">
