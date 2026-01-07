@@ -1,0 +1,30 @@
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PHP
+vendor/
+.env
+.env.local
+.env.backup
+.phpunit.result.cache
+
+# Node / Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs & Temp
+*.log
+tmp/
+git_context.txt
+
+.agent/workflows/
+*.txt
