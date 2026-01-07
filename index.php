@@ -24,7 +24,7 @@
         </div>
     </header>
     <main class="mx-auto max-w-screen-lg px-3 py-6">
-        <section class="flex gap-x-6">
+        <section class="flex gap-x-3">
             <div class="w-2/3">
                 <h1 class="text-3xl font-bold">Oi, meu nome é Rafael.</h1>
                 <p class="text-xl leading-6 mt-6">Transformando lógica em soluções reais. Aqui apresento meus projetos desenvolvidos em PHP e MySQL, demonstrando minha capacidade de estruturar sistemas web e resolver desafios técnicos com criatividade e organização.</p>
@@ -40,7 +40,13 @@
             </div>
         </section>
         <section>
-            <div></div>
+            <div>
+                <h2 class="text-2xl font-bold space-y-3 py-6">Meus Projetos</h2>
+            </div>
+            <div class="flex bg-slate-800 rounded-lg p-3 items-center">
+                <div class="w-1/5"></div>
+                <div class="w-4/5"></div>
+            </div>
         </section>
     </main>
     <footer></footer>
