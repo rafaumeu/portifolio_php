@@ -9,7 +9,7 @@
     <title>Meu Portfólio</title>
 </head>
 
-<body class="bg-slate-900 text-white">
+<body class="bg-slate-900 text-gray-200">
     <header class="mx-auto max-w-screen-lg px-3 py-6 flex items-center justify-between">
         <div class="font-bold font-mono text-cyan-600">
             🐧Meu Portfólio
@@ -23,10 +23,21 @@
             </ul>
         </div>
     </header>
-    <main>
-        <section>
-            <div></div>
-            <div></div>
+    <main class="mx-auto max-w-screen-lg px-3 py-6">
+        <section class="flex gap-x-6">
+            <div class="w-2/3">
+                <h1 class="text-3xl font-bold">Oi, meu nome é Rafael.</h1>
+                <p class="text-xl leading-6 mt-6">Transformando lógica em soluções reais. Aqui apresento meus projetos desenvolvidos em PHP e MySQL, demonstrando minha capacidade de estruturar sistemas web e resolver desafios técnicos com criatividade e organização.</p>
+                <ul class="flex gap-x-3 mt-3">
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="w-1/3 flex item-center justify-center">
+                <img src="" alt="">
+            </div>
         </section>
         <section>
             <div></div>
