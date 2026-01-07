@@ -39,9 +39,9 @@
                 <img src="" alt="">
             </div>
         </section>
-        <section>
+        <section class="space-y-3 py-6">
             <div>
-                <h2 class="text-2xl font-bold space-y-3 py-6">Meus Projetos</h2>
+                <h2 class="text-2xl font-bold">Meus Projetos</h2>
             </div>
             <div class="flex bg-slate-800 rounded-lg p-3 items-center">
                 <div class="w-1/5"></div>
@@ -64,7 +64,11 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="mx-auto max-w-screen-lg min-h-20">
+        <div class="border-t border-gray-600 pt-6 px-3 text-gray-400 text-sm">
+            &copy Copyright 2026. Construido &hearts; por mim mesmo :).
+        </div>
+    </footer>
 </body>
 
 </html>
