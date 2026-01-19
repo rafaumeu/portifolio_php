@@ -1,0 +1,16 @@
+{
+    "name": "rafael/portifolio",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafael Dias Zendron",
+            "email": "mmmarckos@gmail.com"
+        }
+    ],
+    "require": {}
+}
