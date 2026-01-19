@@ -12,5 +12,10 @@
             "email": "mmmarckos@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "nesbot/carbon": "^3.11"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.27"
+    }
 }
