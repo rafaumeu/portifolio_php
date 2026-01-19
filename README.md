@@ -1,105 +1,117 @@
 <div align="center">
 
-# 🚀 Portfolio with PHP and TailwindCSS
+# 🚀 Custom PHP MVC Portfolio
 
-A modern, responsive, and dynamic portfolio built with pure PHP and styled with TailwindCSS.
+A high-performance, handcrafted layout built on a **Custom MVC Framework**.
+Blends the raw power of **PHP 8.3** with the modern styling of **TailwindCSS**.
 
-[![PHP](https://img.shields.io/badge/PHP-8.3-777BB4.svg)](https://php.net/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC.svg)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)
+![MVC](https://img.shields.io/badge/Architecture-MVC-FF6B6B?style=for-the-badge)
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 </div>
+
+<br />
 
 <div align="center">
-  <img src="public/img/portfolio.png" alt="Project Screenshot" width="100%">
+  <img src="public/img/portfolio.png" alt="Project Screenshot" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 About The Project
 
-This project is a complete refactoring of a legacy portfolio. The goal was to modernize the tech stack, moving from old procedural PHP to a component-based structure, maintaining the simplicity of **Vanilla PHP** but with the visual power of **TailwindCSS**.
+This isn't just a portfolio; it's a **Software Engineering Statement**.
+Instead of relying on heavy frameworks like Laravel, I built a **Custom MVC Framework** from scratch to demonstrate deep understanding of:
+- **Dependency Injection**: Custom Container & Service Binding.
+- **Database Abstraction**: Secure PDO Wrapper with dynamic DSN.
+- **Routing**: Custom Regex-free Dispatcher.
+- **Security**: strict_types, Sanitization, and Session Management.
 
-### ✨ What Changed?
-
-- **Frontend**: Full migration to **TailwindCSS** (via CDN for rapid development).
-- **Backend**: Modern PHP serving as a template engine.
-- **Structure**: Separation of concerns in `components/` (Header, Hero, Projects).
-- **Assets**: Organized management of images and dynamic SVG icons.
-- **Workflow**: Automated scripts for semantic commits in WSL.
-
----
-
-## 🛠️ Technologies
-
-- **PHP 8.2+**: Rendering logic and data.
-- **TailwindCSS 3.4**: Utility-first styling.
-- **Semantic HTML5**: Accessible and SEO-friendly structure.
-- **Git Flow & Conventional Commits**: Versioning standard.
+### ✨ Key Features
+- **Strict Architecture**: Separation of concerns (`Core`, `App`, `Views`).
+- **Dependency Injection**: A handcrafted IoC Container managing services.
+- **Database Seeding**: Automated scripts to populate SQLite database.
+- **Modern UI**: Fully responsive Mobile-First design with TailwindCSS.
 
 ---
 
-## 🚀 Project Structure
+## 🏗️ Architecture (The "Lockbox" Standard)
+
+The project follows a rigorous directory structure to ensure scalability:
 
 ```bash
-├── 📁 .agent/          # Automation workflows (AI)
-├── 📁 components/      # Reusable UI components
-│   ├── header.php
-│   ├── hero.php
-│   └── projects.php
-├── 📁 img/             # Assets (Images, Icons, SVG)
-├── index.php           # Entry Point (Main Layout)
-└── README.md           # Documentation
+├── 📁 app/
+│   ├── Controllers/   # Logic Layer (IndexController)
+│   └── Models/        # Data Layer (Project Model)
+├── 📁 config/         # Configuration & Routes
+├── 📁 core/           # Framework Source Code
+│   ├── App.php        # Service Locator
+│   ├── Container.php  # DI Container
+│   ├── Database.php   # PDO Wrapper
+│   └── Router.php     # URL Dispatcher
+├── 📁 database/       # SQLite File
+├── 📁 public/         # Entry Point (index.php)
+└── 📁 views/          # HTML Templates
 ```
 
 ---
 
-## ⚡ How to Run
+## ⚡ Getting Started
 
 ### Prerequisites
-- PHP 8.0 or higher installed.
+- **PHP 8.2+**
+- **Composer**
 
-### Step-by-Step
+### Installation
 
-1. **Clone the repository:**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/rafaumeu/portifolio_php.git
    cd portifolio_php
    ```
 
-2. **Start the Built-in Server:**
+2. **Install Dependencies**
    ```bash
-   php -S localhost:8000
+   composer install
    ```
 
-3. **Access:**
+3. **Setup Database**
+   Initialize and seed the SQLite database:
+   ```bash
+   php db-seed.php
+   ```
+
+4. **Run the Server**
+   ```bash
+   php -S localhost:8000 -t public
+   ```
+
+5. **Access**
    Open `http://localhost:8000` in your browser.
 
 ---
 
 ## 🎨 Customization
 
-### Adding New Projects
-Go to `components/projects.php` and add to the `$projects` array:
+To add new projects, you don't touch the HTML. Just use the database!
 
-```php
-[
-    "titulo" => "New Project",
-    "finalizado" => true,
-    "ano" => 2025,
-    "descricao" => "Amazing description...",
-    "stack" => ["PHP", "Laravel"],
-    "img" => "img/new-project.png"
-]
+```sql
+INSERT INTO projects (title, description, stack, year, finished, image) 
+VALUES ('New App', 'Built with AI', 'PHP,JS', 2026, 1, 'img/new.png');
 ```
 
 ---
+
 <div align="center">
-Developed with 🐧 during Rocketseat's course
-</div>
-<div align="center">
-<img src="https://github.com/rafaumeu.png" width="100" height="100" style="border-radius: 50%;">
+    
+**Developed by Rafael Dias Zendron**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-dias-zendron-528290132/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu)
+
 </div>
