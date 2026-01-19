@@ -1,0 +1,16 @@
+<?php
+
+declare(strict_types=1);
+
+function base_path(string $path = ''): string
+{
+  return dirname(__DIR__) . DIRECTORY_SEPARATOR . $path;
+}
+
+function dd(mixed ...$dump): void
+{
+  echo "<pre class='bg-gray-900 text-white p-4 rounded-lg z-50 relative'>";
+  var_dump($dump);
+  echo "</pre>";
+  die();
+}
