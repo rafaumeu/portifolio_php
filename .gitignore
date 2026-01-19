@@ -26,5 +26,8 @@ yarn-error.log
 tmp/
 git_context.txt
 
-.agent/workflows/
+.agent/
 *.txt
+task.md
+implementation_plan.md
+MANUAL_MIGRATION_GUIDE.md
