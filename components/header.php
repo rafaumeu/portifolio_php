@@ -1,9 +1,9 @@
 <?php
 $items = [
-  ['href' => '#projetos', 'texto' => 'Projetos'],
-  ['href' => '', 'texto' => 'GitHub'],
-  ['href' => '', 'texto' => 'Linkedin'],
-  ['href' => '', 'texto' => 'Twitter'],
+    ['href' => '#projetos', 'texto' => 'Projetos'],
+    ['href' => '', 'texto' => 'GitHub'],
+    ['href' => '', 'texto' => 'Linkedin'],
+    ['href' => '', 'texto' => 'Twitter'],
 ];
 ?>
 <header class="mx-auto max-w-screen-lg px-3 py-6 flex items-center justify-between gap-y-4 sm:gap-y-0">

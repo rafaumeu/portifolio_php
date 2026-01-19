@@ -1,38 +1,38 @@
 <?php
 $projetos = [
 
-  [
-    "titulo" => "Meu Portfolio",
-    "finalizado" => false,
-    "ano" => 2021,
-    "descricao" => "Meu primeiro Portfolio. Escrito em PHP e HTML.",
-    "stack" => ["PHP", "HTML", "CSS", "JS"],
-    "img" => 'img/portfolio.png'
-  ],
-  [
-    "titulo" => "Lista de Tarefas",
-    "finalizado" => true,
-    "ano" => 2022,
-    "descricao" => "Lista de Tarefas. Escrito em PHP e HTML.",
-    "stack" => ["PHP", "HTML", "CSS", "JS"],
-    "img" => ''
-  ],
-  [
-    "titulo" => "Controle de Leitura de Vídeos",
-    "finalizado" => true,
-    "ano" => 2024,
-    "descricao" => "Lista de Livros. Escrito em PHP e HTML.",
-    "stack" => ["PHP", "HTML", "CSS", "JS"],
-    "img" => ''
-  ],
-  [
-    "titulo" => "Mais um Projeto",
-    "finalizado" => false,
-    "ano" => 2025,
-    "descricao" => "Projeto secreto em andamento. Escrito em PHP e HTML.",
-    "stack" => ["PHP", "HTML", "CSS", "JS"],
-    "img" => ''
-  ],
+    [
+        "titulo"     => "Meu Portfolio",
+        "finalizado" => false,
+        "ano"        => 2021,
+        "descricao"  => "Meu primeiro Portfolio. Escrito em PHP e HTML.",
+        "stack"      => ["PHP", "HTML", "CSS", "JS"],
+        "img"        => 'img/portfolio.png',
+    ],
+    [
+        "titulo"     => "Lista de Tarefas",
+        "finalizado" => true,
+        "ano"        => 2022,
+        "descricao"  => "Lista de Tarefas. Escrito em PHP e HTML.",
+        "stack"      => ["PHP", "HTML", "CSS", "JS"],
+        "img"        => '',
+    ],
+    [
+        "titulo"     => "Controle de Leitura de Vídeos",
+        "finalizado" => true,
+        "ano"        => 2024,
+        "descricao"  => "Lista de Livros. Escrito em PHP e HTML.",
+        "stack"      => ["PHP", "HTML", "CSS", "JS"],
+        "img"        => '',
+    ],
+    [
+        "titulo"     => "Mais um Projeto",
+        "finalizado" => false,
+        "ano"        => 2025,
+        "descricao"  => "Projeto secreto em andamento. Escrito em PHP e HTML.",
+        "stack"      => ["PHP", "HTML", "CSS", "JS"],
+        "img"        => '',
+    ],
 ];
 ?>
 <?php foreach ($projetos as $projeto) : ?>
@@ -53,8 +53,9 @@ $projetos = [
         <div class="space-x-1">
           <?php
           $colors = ['fuchsia', 'lime', 'sky', 'rose', 'amber', 'pink', 'purple', 'indigo', 'teal', 'amber'];
-          foreach ($projeto['stack'] as $position => $tech):
-          ?>
+
+    foreach ($projeto['stack'] as $position => $tech):
+        ?>
             <span class="bg-<?= $colors[$position] ?>-400 text-<?= $colors[$position] ?>-900 rounded-md font-semibold px-2 py-1 text-xs"><?= $tech ?></span>
           <?php endforeach; ?>
         </div>

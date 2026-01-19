@@ -1,9 +1,9 @@
 <?php
 $items = [
-  ['href' => '',  'alt' => 'Facebook Logo', 'src' => 'img/facebook.png'],
-  ['href' => '',  'alt' => 'Linkedin Logo', 'src' => 'img/linkedin.png'],
-  ['href' => '',  'alt' => 'Twitter Logo', 'src' => 'img/twitter.png'],
-  ['href' => '',  'alt' => 'Youtube Logo', 'src' => 'img/youtube.png'],
+    ['href' => '',  'alt' => 'Facebook Logo', 'src' => 'img/facebook.png'],
+    ['href' => '',  'alt' => 'Linkedin Logo', 'src' => 'img/linkedin.png'],
+    ['href' => '',  'alt' => 'Twitter Logo', 'src' => 'img/twitter.png'],
+    ['href' => '',  'alt' => 'Youtube Logo', 'src' => 'img/youtube.png'],
 ]
 ?>
 <section class="flex flex-col-reverse md:flex-row gap-x-3 items-center">
