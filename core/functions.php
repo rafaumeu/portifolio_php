@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Core\Request;
+
 function base_path(string $path = ''): string
 {
   return dirname(__DIR__) . DIRECTORY_SEPARATOR . $path;
@@ -13,4 +15,9 @@ function dd(mixed ...$dump): void
   var_dump($dump);
   echo "</pre>";
   die();
+}
+
+function request(): Request
+{
+  return new Request();
 }
