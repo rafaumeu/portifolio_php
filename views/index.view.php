@@ -10,14 +10,14 @@
 </head>
 
 <body class="bg-slate-900 text-gray-200">
-    <?php include 'components/header.php'; ?>
+    <?php require base_path('views/partials/_header.view.php'); ?>
     <main class="mx-auto max-w-screen-lg px-3 py-6">
-        <?php include 'components/hero.php'; ?>
+        <?php require base_path('views/partials/_hero.view.php'); ?>
         <section class="space-y-3 py-6" id="projetos">
             <div>
                 <h2 class="text-2xl font-bold">Meus Projetos</h2>
             </div>
-            <?php include 'components/projects.php'; ?>
+            <?php require base_path('views/partials/_projects.view.php'); ?>
         </section>
     </main>
     <footer class="mx-auto max-w-screen-lg min-h-20">
