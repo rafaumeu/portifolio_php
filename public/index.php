@@ -6,4 +6,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
-require __DIR__ . '/../config/routes.php';
+require base_path('bootstrap.php');
+
+require base_path('config/routes.php');
