@@ -22,3 +22,11 @@ function request(): Request
 {
     return new Request();
 }
+
+function view(string $view, array $data = []): void {
+    foreach ($data as $key => $value) {
+        $$key = $value;
+    }
+
+    require base_path("views/{$view}.view.php");
+}

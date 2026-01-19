@@ -11,7 +11,7 @@ A modern, responsive, and dynamic portfolio built with pure PHP and styled with 
 </div>
 
 <div align="center">
-  <img src="img/portfolio.png" alt="Project Screenshot" width="100%">
+  <img src="public/img/portfolio.png" alt="Project Screenshot" width="100%">
 </div>
 
 ---
